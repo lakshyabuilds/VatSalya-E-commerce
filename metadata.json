@@ -1,0 +1,6 @@
+{
+  "name": "Vaatsalya Baby Food",
+  "description": "Nourishing little beginnings with wholesome baby foods made with care and trusted ingredients.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #294936;      /* Forest Green */
+  --color-brand-green-light: #3E6B50; 
+  --color-brand-orange: #C45A38;     /* Terracotta/Warm Orange */
+  --color-brand-orange-light: #DA795A;
+  --color-brand-sand: #FBF9F6;       /* Off-White/Cream Backgrounds */
+  --color-brand-beige: #F1EBE1;      /* Slightly darker cream for cards */
+  --color-brand-dark: #2B332F;       /* Dark Charcoal/Deep Green-Grey */
+
+  --font-sans: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+body {
+  background-color: var(--color-brand-sand);
+  color: var(--color-brand-dark);
+}
+
+body {
+  @apply bg-brand-sand text-stone-800 font-sans antialiased;
+}
+
+/* Custom scrollbar for horizontal lists */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
