@@ -114,6 +114,65 @@ export default function About() {
         </div>
       </section>
 
+      {/* A Mother's First Choice */}
+      <section className="py-24 bg-brand-green/5 overflow-hidden">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="order-2 lg:order-1 relative h-[600px] rounded-[2rem] overflow-hidden shadow-2xl"
+              >
+                <div className="absolute inset-0 bg-brand-orange/10 mix-blend-multiply z-10" />
+                <img 
+                  src="/mom.jpeg" 
+                  alt="Indian Mother wearing soft green feeding her 6-month-old baby boy with a spoon" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="order-1 lg:order-2 space-y-8"
+              >
+                <div>
+                  <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-6 leading-tight">
+                    Why we are a <br />
+                    <span className="italic text-brand-green">Mother's First Choice.</span>
+                  </h2>
+                  <p className="text-stone-600 text-lg leading-relaxed mb-6">
+                    Every mother wants the absolute best for her child. When it comes to their first foods, the transition from milk to solids is a critical milestone. Vaatsalya is crafted to make this journey safe, nourishing, and joyful.
+                  </p>
+                  <p className="text-stone-600 text-lg leading-relaxed">
+                    Inspired by ancient Indian traditions and backed by modern nutritional science, our sprouted ragi blends provide the exact essential nutrients — like calcium, iron, and protein — that a 6-month-old needs to thrive, without any hidden sugars, preservatives, or artificial colors.
+                  </p>
+                </div>
+
+                <ul className="space-y-4">
+                  {[
+                    "Gentle on a baby's developing digestive system.",
+                    "Rich in natural calcium for strong bones and teeth.",
+                    "100% free from toxins, chemicals, and preservatives.",
+                    "Loved by babies for its natural, comforting taste.",
+                  ].map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-4">
+                      <div className="w-6 h-6 rounded-full bg-brand-green/20 flex items-center justify-center shrink-0 mt-1">
+                        <Heart className="w-3.5 h-3.5 text-brand-green" />
+                      </div>
+                      <span className="text-stone-700 font-medium">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+         </div>
+      </section>
+
       {/* Conclusion */}
       <section className="py-24 text-center bg-brand-sand">
         <div className="max-w-2xl mx-auto px-4">
