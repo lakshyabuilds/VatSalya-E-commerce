@@ -89,8 +89,8 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <section className="relative w-full bg-brand-beige">
-      <div className="relative w-full aspect-video overflow-hidden">
+    <div className="relative w-full overflow-hidden flex flex-col">
+      <div className="relative w-full aspect-video overflow-hidden bg-brand-beige">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -126,6 +126,6 @@ export default function HeroCarousel() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

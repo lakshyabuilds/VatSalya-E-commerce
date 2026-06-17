@@ -15,9 +15,9 @@ export default function Home() {
       <HeroCarousel />
 
       {/* 2. Our Products (Bestsellers) */}
-      <section className="py-24 bg-white">
+      <section className="pt-8 pb-16 md:pt-12 md:pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex justify-between items-end mb-10">
             <div>
               <h2 className="text-3xl font-serif font-semibold text-brand-dark mb-4">Our Products</h2>
               <p className="text-stone-600">Loved by parents, approved by babies.</p>
@@ -27,7 +27,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {bestsellerProducts.map(product => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -41,7 +41,7 @@ export default function Home() {
       </section>
 
       {/* 3. Experts & Mothers Testimonials (Video) */}
-      <section className="py-24 bg-brand-sand overflow-hidden">
+      <section className="py-16 lg:py-24 bg-brand-sand overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-5xl font-serif font-bold text-brand-dark mb-6">
@@ -52,7 +52,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                <div className="relative rounded-[2rem] overflow-hidden shadow-2xl aspect-video bg-stone-900 flex items-center justify-center group cursor-pointer border border-stone-200">
                  {/* Video Placeholder Image */}
                  <img src="https://placehold.co/1280x720/1a1a1a/ffffff/webp?text=YouTube+Video+Placeholder" alt="Video thumbnail" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* 4. A Mother's First Choice */}
-      <section className="py-24 bg-brand-green/5 overflow-hidden">
+      <section className="py-16 lg:py-24 bg-brand-green/5 overflow-hidden">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div 
@@ -94,7 +94,7 @@ export default function Home() {
                 className="space-y-8"
               >
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-6 leading-tight">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-brand-dark mb-6 leading-tight">
                     Why we are a <br />
                     <span className="italic text-brand-green">Mother's First Choice.</span>
                   </h2>
@@ -142,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* 5. Why Choose Us */}
-      <section className="py-24 bg-brand-beige relative z-10">
+      <section className="py-16 lg:py-24 bg-brand-beige relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-6">
@@ -181,7 +181,7 @@ export default function Home() {
 
       {/* 6. Featured Product */}
       {featuredProduct && (
-        <section className="py-24 bg-brand-green text-brand-sand">
+        <section className="py-16 lg:py-24 bg-brand-green text-brand-sand">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div 
@@ -203,7 +203,7 @@ export default function Home() {
                   <span className="text-brand-orange-light font-medium tracking-wide uppercase text-sm mb-3 block">
                     Featured Product
                   </span>
-                  <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-6">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold mb-6">
                     {featuredProduct.name}
                   </h2>
                   <p className="text-brand-sand/80 text-lg leading-relaxed mb-8">
@@ -238,7 +238,7 @@ export default function Home() {
       )}
 
       {/* 7. Customer Stories */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-16 lg:py-24 bg-white overflow-hidden">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-serif font-semibold text-brand-dark mb-4">
@@ -247,7 +247,7 @@ export default function Home() {
               <p className="text-stone-600">Real feedback from real parents.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {testimonials.map((testimonial, i) => (
                 <motion.div 
                   key={testimonial.id}
@@ -272,7 +272,7 @@ export default function Home() {
       </section>
 
       {/* 8. CTA */}
-      <section className="py-24 bg-brand-dark text-center relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-brand-dark text-center relative overflow-hidden">
         {/* Subtle background abstract shape */}
         <div className="absolute top-0 right-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-brand-green/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 z-0"></div>
         <div className="absolute bottom-0 left-0 w-[400px] md:w-[800px] h-[400px] md:h-[800px] bg-brand-orange/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/2 z-0"></div>

@@ -29,9 +29,9 @@ export default function About() {
       </section>
 
       {/* Origin Story */}
-      <section className="py-24 bg-white relative">
+      <section className="py-16 lg:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -74,7 +74,7 @@ export default function About() {
       </section>
 
       {/* Our Promise */}
-      <section className="py-24 bg-brand-dark text-brand-sand relative overflow-hidden">
+      <section className="py-16 lg:py-24 bg-brand-dark text-brand-sand relative overflow-hidden">
         {/* Background blobs for mood */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-green/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 z-0"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-orange/10 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3 z-0"></div>
@@ -89,7 +89,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 text-center">
             {[
               { icon: Leaf, title: "100% Natural Ingredients", desc: "Just sprouted ragi and natural banana powder. Nothing else." },
               { icon: ShieldCheck, title: "Zero Added Sugar or Salt", desc: "We never use refined sugars, salts, or artificial preservatives." },
@@ -115,9 +115,9 @@ export default function About() {
       </section>
 
       {/* A Mother's First Choice */}
-      <section className="py-24 bg-brand-green/5 overflow-hidden">
+      <section className="py-16 lg:py-24 bg-brand-green/5 overflow-hidden">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               <motion.div 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -141,7 +141,7 @@ export default function About() {
                 className="order-1 lg:order-2 space-y-8"
               >
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-6 leading-tight">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-6 leading-tight">
                     Why we are a <br />
                     <span className="italic text-brand-green">Mother's First Choice.</span>
                   </h2>
@@ -174,7 +174,7 @@ export default function About() {
       </section>
 
       {/* Conclusion */}
-      <section className="py-24 text-center bg-brand-sand">
+      <section className="py-16 lg:py-24 text-center bg-brand-sand">
         <div className="max-w-2xl mx-auto px-4">
           <Heart className="w-12 h-12 text-brand-orange mx-auto mb-6 opacity-80" />
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-6">
