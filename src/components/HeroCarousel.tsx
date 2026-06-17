@@ -89,45 +89,41 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-brand-beige py-12 lg:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative w-full aspect-[4/3] md:aspect-video rounded-[2rem] overflow-hidden shadow-2xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.7 }}
-              className="absolute inset-0"
-            >
-              {/* Background Image */}
-              <img 
-                src={slides[current].image} 
-                alt={slides[current].title} 
-                className="w-full h-full object-cover"
-              />
-              
-              {/* Clickable Area for Shopping */}
-              <div className="absolute inset-x-0 bottom-16 sm:bottom-24 flex justify-center z-20">
-                <Link to="/products" className="opacity-0 w-full h-full absolute inset-0">
-                  <span className="sr-only">Shop Our Collection</span>
-                </Link>
-              </div>
-            </motion.div>
-          </AnimatePresence>
+    <section className="relative w-full bg-brand-beige">
+      <div className="relative w-full aspect-video overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.7 }}
+            className="absolute inset-0"
+          >
+            {/* Background Image */}
+            <img 
+              src={slides[current].image} 
+              alt={slides[current].title} 
+              className="w-full h-full object-cover"
+            />
+            
+            {/* Clickable Area for Shopping */}
+            <Link to="/products" className="absolute inset-0 z-20">
+              <span className="sr-only">Shop Our Collection</span>
+            </Link>
+          </motion.div>
+        </AnimatePresence>
 
-          {/* Pagination */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
-            {slides.map((_, i) => (
-              <button 
-                key={i} 
-                onClick={() => setCurrent(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-8 bg-brand-orange' : 'w-4 bg-white/50 hover:bg-white/80'}`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
-          </div>
+        {/* Pagination */}
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+          {slides.map((_, i) => (
+            <button 
+              key={i} 
+              onClick={() => setCurrent(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-8 bg-brand-orange' : 'w-4 bg-white/60 hover:bg-white'}`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
